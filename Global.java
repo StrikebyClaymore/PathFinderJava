@@ -14,6 +14,11 @@ public class Global{
 
         ArrayList<java.awt.Point> path = FindPath(matrix, start, end);
 
+        PrintPath(matrix, path);
+        System.exit(0);
+    }
+
+    static void PrintPath(Objects.Matrix matrix, ArrayList<java.awt.Point> path){
         for(int i = 0; i < matrix.body.size(); i++){
             for(int j = 0; j < matrix.body.get(i).size(); j++){
                 boolean flag = false;
@@ -35,9 +40,6 @@ public class Global{
     }
 
     static ArrayList<java.awt.Point> FindPath(Objects.Matrix field, java.awt.Point start, java.awt.Point end){
-        
-        //ArrayList<java.awt.Point> path = new ArrayList<>();
-
         ArrayList<Objects.Cell> openSet = new ArrayList<>();
         ArrayList<Objects.Cell> closetSet = new ArrayList<>();
 
