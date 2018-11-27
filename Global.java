@@ -62,8 +62,8 @@ public class Global{
                 int count = 0;
                 for(Objects.Cell c : closetSet){
                     if(c.position == neighbourCell.position){ count += 1; }
-                    if(count > 0){ continue; }
                 }
+                if(count > 0){ continue; }
                 Objects.Cell openCell = null;
                 for (Objects.Cell c : openSet) {
                     if(c.position == neighbourCell.position){
